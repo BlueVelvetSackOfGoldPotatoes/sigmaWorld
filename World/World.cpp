@@ -30,9 +30,10 @@ void World::initialize()
             d_map[row][col].setState(Square::State::FOOD);
 }
 
-void World::print() 
+void World::print() const
 {
     for (size_t row = 0; row != d_height; row++)
+    {
         for (size_t col = 0; col != d_width; col++)
             switch (d_map[row][col].state())
             {
@@ -49,5 +50,11 @@ void World::print()
                     cout << '#';
                 break;
             }
+        cout << '\n';
+    }
 }
-                
+
+void World::erase() const
+{
+
+}

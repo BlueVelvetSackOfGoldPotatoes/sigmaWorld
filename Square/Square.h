@@ -19,6 +19,7 @@ public:
     Square();
     Square(State state);
 
+    void setState(State state);
     State state() const;
 };
 

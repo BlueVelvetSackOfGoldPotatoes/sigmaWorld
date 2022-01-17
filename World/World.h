@@ -19,7 +19,7 @@ public:
 	void erase() const;
 
 private:
-	void initialze();
+	void initialize();
 };
 
 #endif
