@@ -8,4 +8,5 @@ int main()
     World world;
 
     world.print();
+    world.erase();
 }

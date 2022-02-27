@@ -1,9 +1,4 @@
-#include "World.h"
-#include <random>
-#include <time.h>
-#include <iostream>
-
-using namespace std;
+#include "World.ih"
 
 World::World()
 :
@@ -56,5 +51,10 @@ void World::print() const
 
 void World::erase() const
 {
-
+    for (size_t row = 0; row != d_height; row++)
+    {
+        cout << '\b';
+        for (size_t col = 0; col != d_width; col++)
+            cout << '\b';
+    }
 }
