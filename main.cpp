@@ -6,7 +6,7 @@ using namespace std;
 /**
  * Reads command line input, generates world and starts the main loop.
  *
- * @param arg1 * arg2 = matrix size; arg3 = number of iterations to run the world
+ * @param arg1 * arg2 = matrix size; arg3 = number of iterations to run the world.
  */
 
 int main(int argc, char* argv[])

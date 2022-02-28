@@ -32,9 +32,22 @@ void World::run(int doomsday)
 {
     int rand_seeder;
 
+    // start of print iteration
     for (int iter = 0; iter != doomsday; iter++)
     {
-        cout << "Iter " << iter << "--------------------\n";
+        for (size_t column = 0; column != d_width; column++)
+            cout << "-";
+        cout << "\n";
+        cout << "| Iter " << iter << "\n";
+        cout << "|";
+        for (size_t column = 0; column != d_width-2; column++)
+            cout << " ";
+        cout << "\n";
+        for (size_t column = 0; column != d_width; column++)
+            cout << "-";
+        cout << "\n";
+    // end of print iteration
+
         for (size_t row = 0; row != d_height; row++)
         {
             for (size_t col = 0; col != d_width; col++)
