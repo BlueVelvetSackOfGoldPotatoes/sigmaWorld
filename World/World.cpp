@@ -1,7 +1,7 @@
 #include "World.h"
 #include <random>
-#include <time.h>
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
@@ -23,22 +23,43 @@ World::World(size_t height, size_t width)
 
 void World::initialize()
 {
-    srand(time(NULL));
-
     for (size_t row = 0; row != d_height; row++)
         for (size_t col = 0; col != d_width; col++)
-            d_map[row][col].setState(Square::State::FOOD);
+            d_map[row][col].setState(Square::State::EMPTY);
 }
 
-void World::print() const
+void World::run(int doomsday)
 {
+    int rand_seeder;
+
+    for (int iter = 0; iter != doomsday; iter++)
+    {
+        cout << "Iter " << iter << "--------------------\n";
+        for (size_t row = 0; row != d_height; row++)
+        {
+            for (size_t col = 0; col != d_width; col++)
+            {
+                rand_seeder = 1 + (rand() % 100);
+                if (rand_seeder <= 50)
+                {
+                    d_map[row][col].setState(Square::State::FOOD);
+                }
+            }
+        }
+        this->print(doomsday);
+    }
+}
+
+void World::print(int doomsday) const
+{
+    
     for (size_t row = 0; row != d_height; row++)
     {
         for (size_t col = 0; col != d_width; col++)
             switch (d_map[row][col].state())
             {
                 case Square::State::EMPTY:
-                    cout << ' ';
+                    cout << '_';
                 break;
                 case Square::State::FOOD:
                     cout << 'F';

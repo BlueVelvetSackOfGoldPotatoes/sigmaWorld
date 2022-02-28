@@ -1,3 +1,5 @@
 tmp/World/World.o: World/World.cpp World/World.h World/../Square/Square.h
+
 World/World.h:
+
 World/../Square/Square.h:

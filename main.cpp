@@ -7,5 +7,9 @@ int main()
 {
     World world;
 
-    world.print();
+    int doomsday; 
+    cout << "Iterations: ";
+    cin >> doomsday; // Get user input from the keyboard
+    
+    world.run(doomsday);
 }
