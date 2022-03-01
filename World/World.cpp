@@ -53,7 +53,7 @@ void World::run(int doomsday)
             for (size_t col = 0; col != d_width; col++)
             {
                 rand_seeder = 1 + (rand() % 100);
-                if (rand_seeder <= 50)
+                if ((rand_seeder <= 50) && (d_map[row][col].state() == Square::State::EMPTY))
                 {
                     d_map[row][col].setState(Square::State::FOOD);
                 }

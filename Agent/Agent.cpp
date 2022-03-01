@@ -14,6 +14,11 @@ Agent::Agent(State state)
     d_state(state)
 {}
 
+void Agent::hear(size_t intensity)
+{
+    
+}
+
 void Agent::setState(State state)
 {
     d_state = state;
@@ -23,3 +28,9 @@ Agent::State Agent::state() const
 {
     return d_state;
 }
+
+// Agent::speak()
+// {
+    
+// }
+
