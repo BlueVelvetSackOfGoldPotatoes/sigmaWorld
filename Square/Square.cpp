@@ -1,8 +1,4 @@
-#include "Square.h"
-#include <random>
-#include <time.h>
-
-using namespace std;
+#include "Square.ih"
 
 Square::Square()
 :

@@ -90,5 +90,10 @@ void World::print(int doomsday) const
 
 void World::erase() const
 {
-
+    for (size_t row = 0; row != d_height; row++)
+    {
+        cout << '\b';
+        for (size_t col = 0; col != d_width; col++)
+            cout << '\b';
+    }
 }
