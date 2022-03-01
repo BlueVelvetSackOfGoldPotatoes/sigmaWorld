@@ -15,8 +15,9 @@ public:
 	World();
 	World(size_t height, size_t width);
 
-	void print() const;
+	void print(int doomsday) const;
 	void erase() const;
+	void run(int doomsday);
 
 private:
 	void initialize();

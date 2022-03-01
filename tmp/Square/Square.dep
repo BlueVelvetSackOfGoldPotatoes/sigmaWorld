@@ -1,2 +1,3 @@
 tmp/Square/Square.o: Square/Square.cpp Square/Square.h
+
 Square/Square.h:

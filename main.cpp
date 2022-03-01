@@ -3,10 +3,14 @@
 
 using namespace std;
 
-int main()
-{
-    World world;
+/**
+ * Reads command line input, generates world and starts the main loop.
+ *
+ * @param arg1 * arg2 = matrix size; arg3 = number of iterations to run the world.
+ */
 
-    world.print();
-    world.erase();
+int main(int argc, char* argv[])
+{
+    World world(atoi(argv[1]), atoi(argv[2]));
+    world.run(atoi(argv[3]));
 }

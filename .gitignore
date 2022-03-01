@@ -1,3 +1,6 @@
+# Temporary files
+tmp
+
 # Prerequisites
 *.d
 
@@ -31,3 +34,6 @@
 *.out
 *.app
 main
+
+# Images
+imgs
